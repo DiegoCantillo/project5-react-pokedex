@@ -1,0 +1,412 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome-page{
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.welcome-page img{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.welcome-page .login-page{
+    width: 50%;
+    height: 250px;
+    margin: auto;
+    background-color: rgba(127, 255, 212, 0.201);
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.welcome-page .login-page h1{
+    margin-top: 30px;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 28px;
+    padding: 4px;
+}
+
+.welcome-page .login-page input{
+    width: 60%;
+    height: 42px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    text-align: center;
+}
+
+.welcome-page .login-page button{
+     width: 15%;
+     height: 62px;
+     background-color: #2557a9;
+     color: yellow;
+     font-weight: 700;
+     border-radius: 0 8px 8px 0;
+     border: none;
+     font-size: 18px;
+}
+
+/************************************ROUTE POKEDEX*****************************************/
+
+.container-pokedex{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.container-pokedex .leave {
+    width: 37px;
+    height: 37px;
+    padding: 10px;
+    background-color: rgb(143, 232, 11);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container-pokedex .leave:hover{
+    width: 38px;
+    height: 38px;
+    background-color:rgb(113, 183, 7);
+}
+
+.container-pokedex .leave i{
+    font-size: 35px;
+    color: white;
+}
+
+@keyframes rotation{
+    from{transform: rotateZ(0deg);}
+    to{transform:  rotateZ(360deg);}
+}
+
+.pokeball{
+    width: 30%;
+    height: 430px;
+    background-image: url(https://mypokedex101.netlify.app/static/media/pokeball.81cfacf9.png);
+    position: fixed;
+    filter: brightness(200%);
+    z-index: -1;
+    right: -80px;
+    top: -60px;
+    background-size: cover;
+    height: 500px;
+    width: 500px;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+}
+
+.container-pokedex .characters-pokedex {
+    width: 90%;
+    margin: auto;
+}
+
+
+.container-pokedex .characters-pokedex img{
+    width: 200px;
+    overflow: hidden;
+    border-bottom: 2px solid black;
+}
+
+.container-pokedex .characters-pokedex h1{
+    text-align: center;
+    font-weight: 900;
+    color: #ff1c1c;
+    font-size: 38px;
+    -webkit-text-stroke: black 3px
+}
+
+.container-pokedex .characters-pokedex p{
+    margin: 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container-pokedex .characters-pokedex form{
+    width: 50%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2557a9;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.container-pokedex .characters-pokedex form h2{
+    color: yellow;
+    text-align: center;
+}
+
+.container-pokedex .characters-pokedex form .search-poke{
+    width: 100%;
+    text-align: center;
+}
+
+.container-pokedex .characters-pokedex form .search-poke input{
+    width:  78%;
+    height: 42px;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+}
+
+.container-pokedex .characters-pokedex form .search-poke button{
+    width: 7%;
+    height: 44px;
+    border: none;
+    background-color:  white;
+    border-radius: 0 12px 12px 0;
+}
+
+.container-pokedex .characters-pokedex form select{
+    width: 85%;
+    height: 42px;
+    display: block;
+    margin: 30px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 10px;
+    font-weight: 700px;
+    text-align: center;
+}
+
+
+.container-pokedex .characters-pokedex .poke-card{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
+    margin-top: 60px;
+   padding-left: 0;
+}
+
+.container-pokedex .characters-pokedex .poke-card li {
+    text-align: center;
+    border: 1px solid black;
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+    list-style: none;
+    background-color:  #a5c0eb;
+}
+
+.container-pokedex .characters-pokedex .poke-card  img{
+    width: 130px;
+    height: 150px;
+    text-align: center;
+}
+
+.container-pokedex .container-info{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+
+.container-pokedex .container-info .info-card p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+.container-img-leter{
+   width: 90%;
+   margin: auto;
+   padding-left: 8px;
+   height: 70px; 
+   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png);
+   background-size: 40%;
+   background-repeat: no-repeat;
+   display: flex;
+   justify-content: center;
+}
+
+/******************************************POKEMONES PER ID********************************************/
+
+.poke-per-id {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #48d0b0;
+    position: absolute;
+    z-index: -1;
+}
+
+.poke-per-id .btn-previus{
+    text-align: justify;
+    font-size: 45px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+.poke-per-id .btn-previus i{
+    cursor: pointer;
+    color: #2557a9;
+}
+
+.poke-per-id .btn-previus i:hover{
+    font-size: 47px;
+    color: yellow;
+}
+
+
+
+.poke-per-id Img{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+/*********************Details-poke************************/
+.poke-per-id .set-contain-movements{
+    width: 70%;
+    display: flex;
+    gap: 40px;
+    margin: auto;
+    position: relative;
+}
+
+.poke-per-id .set-contain-movements .main-features{
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.poke-per-id .set-contain-movements .main-features .content-img img{
+   width: 43%;
+}
+
+.poke-per-id .set-contain-movements .main-features .content-img h1{
+    margin: 4px;
+ }
+
+.poke-per-id .set-contain-movements .main-features .content-img .numberid{
+    width: 36px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #adb5b3;
+    border-radius: 8px;
+    font-weight: 700;
+ }
+
+.poke-per-id .set-contain-movements .main-features .content-img .duo-height-weight{
+    display: flex;
+    justify-content: space-around;
+}
+
+.poke-per-id .set-contain-movements .main-features .content-img .duo-height-weight p{
+    margin: 0;
+}
+
+.poke-per-id .set-contain-movements .pokeletter-detail{
+    width: 40%;
+    height: 300px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png);
+    background-repeat: no-repeat;
+    background-size: 66%;
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    z-index: 1;
+}
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail{
+    width: 75%;
+}
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail .contain-type-and-abilities{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    gap: 20px;
+}
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail .types, .abilities{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+}
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail .types .duo-types{
+    display: flex;
+    justify-content: space-around;
+   text-align: center;
+}
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail .types .duo-types .type1, .type2{
+    width: 40%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: #48d0b0;
+}
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail .abilities .duo-abilities {
+    display: flex;
+    justify-content: space-around;
+   text-align: center;
+}
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail .abilities .duo-abilities .abilities1, .abilities2{
+    width: 40%;
+    height: 37px;
+    border-radius: 6px;
+    padding-top: 16px;
+    background-color: #d7e2df;
+}
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail .stats-bases{
+    background-color: white;
+    padding: 20px;
+    margin-top: 12px;
+}
+
+
+.poke-per-id .set-contain-movements .contain-characters-pokedetail .stats-bases .content-stats p{
+    text-align: justify;
+    border-bottom: 1px solid black;
+}
+
+.poke-per-id .set-contain-movements .movements{
+    width: 25%;
+    background-color: white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.poke-per-id .set-contain-movements .movements ul, li{
+    list-style: none;
+    padding: 0;
+}
+
+.poke-per-id .set-contain-movements .movements ul li{
+    padding-top: 7px;
+}
+
+.poke-per-id .set-contain-movements .movements ul li .line{
+    width: 40%;
+    border-bottom: 1px solid rgb(189, 186, 186);
+    margin: auto;
+    padding: 5px;
+}
