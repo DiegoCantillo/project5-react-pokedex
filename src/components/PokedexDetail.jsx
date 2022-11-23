@@ -43,8 +43,8 @@ const PokedexDetail = () => {
                         <section className='types'>
                             <h2>Types</h2>
                             <div className="duo-types">
-                                <div className='type1'><p>{pokeCharacter.types?.[0].type.name}</p></div>
-                                <div className='type2'><p>{pokeCharacter.types?.[1].type.name}</p></div>
+                                <div className='type1'><p>{pokeCharacter.types?.[0]?.type.name}</p></div>
+                                <div className='type2'><p>{pokeCharacter.types?.[1]?.type.name}</p></div>
                             </div>
                         </section>
                         <section className='abilities'>
